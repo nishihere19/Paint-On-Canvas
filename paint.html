@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint-On-Canvas</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <p>WELCOME TO PAINT-ON-CANVAS!!</p>
+    <div class="shapes">
+        <input type="button" class="bg" value="Background-Color" onclick="bg();">
+        <input type="button" class="square" value="pencil" onclick="pencil();">
+        <input type="button" class="square" value="square" onclick="square();">
+        <input type="button" class="circle" value="circle" onclick="circle();">
+        <input type="button" class="ellipse" value="ellipse" onclick="ellipse();">
+        <input type="button" class="Fill" value="Fill Color" onclick="fill();">
+        <input type="button" class="eraser" value="Eraser" onclick="eraser();">
+        <input type="button" class="add" value="+" onclick="add();">
+        <input type="button" class="subtract" value="-" onclick="sub();">
+
+
+    </div>
+   <canvas id="cnvs" width="600" height="400"></canvas>
+   <div class="colors">
+    <input type="button" class="Black"  onclick="black();">
+    <input type="button" class="White" onclick="white();">
+    <input type="button" class="Blue" onclick="blue();">
+    <input type="button" class="Red"  onclick="red();">
+    <input type="button" class="Green"  onclick="green();">
+    <input type="button" class="Brown"  onclick="brown();">
+    <input type="button" class="Yellow"  onclick="yellow();">
+    <input type="button" class="Pink" onclick="pink();">
+    <input type="button" class="lb" onclick="light_blue();">
+    <input type="button" class="Orange" onclick="orange();">
+    <input type="button" class="lg" onclick="lg();">
+    
+   </div>
+   <script src="paint.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    background-image: url(holographic-3.jpg);
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
+
+#cnvs{
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid black;
+}
+.shapes{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 90px;
+    background-color: tomato;
+
+}
+.square,.Fill,.pencil,.circle, .ellipse, .eraser,.add, .subtract, .bg{
+    
+    top: 20%;
+    height: 50px;
+    background-color: tomato;
+    width: inherit;
+    color: white;
+    font-family: cursive;
+    
+    font-size: 1rem;
+}
+.bg{
+    width: 150px;
+}
+
+
+.colors{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 90px;
+    background-color: tomato;
+}
+.Blue, .Brown, .Pink, .lb, .White, .Black, .Yellow{
+    height: 50px;
+   
+    width: inherit;
+    color: wheat;
+}
+.Blue{
+    background-color:blue;
+}
+.Brown{
+    background-color:brown;
+}
+.White{
+    background-color:white;
+}
+.Black{
+    background-color:black;
+}
+.lb{
+    background-color:lightblue;
+}
+.Pink{
+    background-color: pink;
+}
+.Yellow{
+    background-color: yellow;
+}
+.Orange{
+    height: 50px;
+    background-color:orange;
+    width: inherit;
+    color: wheat;
+}
+.lg{
+    height: 50px;
+    background-color:lightgreen;
+    width: inherit;
+    color: wheat;
+}
+.Red{
+    height: 50px;
+    background-color:red;
+    width: inherit;
+    color: wheat;
+}
+.Green{
+    height: 50px;
+    background-color:green;
+    width: inherit;
+    color: wheat;
+}
