@@ -9,6 +9,9 @@ ctx.lineWidth=strokeval;
 var erase=false;
 var defCol="black";
 var defStr=1;
+var x=(window.innerWidth-600)/2;
+var y=(window.innerHeight-400)/2;
+//console.log(x);
 //canvas.setAttribute("tabindex",0);
 canvas.addEventListener("click", onmousedown, false);
 canvas.addEventListener("hover", onmousemove, false);
@@ -16,8 +19,8 @@ canvas.addEventListener("hover", onmouseup, false);
 
 var lastX,lastY,isDown=false;
 canvas.onmousedown = function(e){
-     lastX=e.clientX-383;
-     lastY=e.clientY-128;
+     lastX=e.clientX-x;
+     lastY=e.clientY-y;
     isDown=true;
     if(tool!="fill"){
         //ctx.moveTo(lastX,lastY);
@@ -36,13 +39,13 @@ canvas.onmousemove= function(e){
     }
     if(tool=="pencil"){
         
-        ctx.lineTo(e.clientX-383,e.clientY-128);
+        ctx.lineTo(e.clientX-x,e.clientY-y);
         console.log(lastX,e.clientX);
         console.log(lastY,e.clientY);
         
         ctx.stroke();
-        lastX=e.clientX-383;
-        lastY=e.clientY-128;
+        lastX=e.clientX-x;
+        lastY=e.clientY-y;
     }
     
     /*else if(tool=="square"){
@@ -60,20 +63,20 @@ canvas.onmouseup=function(e){
     console.log(e.clientX);
     if(tool=="square"){
         
-        ctx.rect(lastX,lastY,e.clientX-383-lastX,e.clientY-128-lastY);
+        ctx.rect(lastX,lastY,e.clientX-x-lastX,e.clientY-y-lastY);
         ctx.stroke();
        
     }
     if(tool=="circle"){
-        var r=(Math.sqrt(((e.clientX-383-lastX)*(e.clientX-383-lastX))+((e.clientY-129-lastY)*(e.clientY-129-lastY))))/2;
+        var r=(Math.sqrt(((e.clientX-x-lastX)*(e.clientX-x-lastX))+((e.clientY-129-lastY)*(e.clientY-129-lastY))))/2;
         
-        ctx.arc(lastX+(e.clientX-383-lastX)/2,lastY+(e.clientY-129-lastY)/2,r,0,2*Math.PI,true);
+        ctx.arc(lastX+(e.clientX-x-lastX)/2,lastY+(e.clientY-129-lastY)/2,r,0,2*Math.PI,true);
         //ctx.moveTo(e.clientX-263,e.clientY-129);
         ctx.stroke();
        
     }
     if(tool=="ellipse"){
-        var rx=(e.clientX-383-lastX)/2;
+        var rx=(e.clientX-x-lastX)/2;
         if(rx<0){
             rx=-rx;
         }
@@ -82,7 +85,7 @@ canvas.onmouseup=function(e){
             ry=-ry;
         }
         
-        ctx.ellipse(lastX+(e.clientX-383-lastX)/2,lastY+(e.clientY-129-lastY)/2,rx,ry,0,0,2*Math.PI,true);
+        ctx.ellipse(lastX+(e.clientX-x-lastX)/2,lastY+(e.clientY-129-lastY)/2,rx,ry,0,0,2*Math.PI,true);
         //ctx.moveTo(e.clientX-263,e.clientY-129);
         ctx.stroke();
         
